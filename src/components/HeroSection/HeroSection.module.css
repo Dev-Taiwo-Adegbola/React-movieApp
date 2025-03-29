@@ -1,0 +1,136 @@
+.HeroSection {
+  position: absolute;
+  left: 22%;
+  background: url("../../assets/hero.png") 50% / cover no-repeat;
+  width: 78%;
+  height: 455px;
+  color: #fff;
+  padding: 0 20px 0 32px ;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+.navGroup ul {
+  display: flex;
+  gap: 32px;
+}
+.navGroup ul li {
+  list-style: none;
+  font-size: 14px;
+}
+
+.userGroup {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.MenuBar {
+  display: none;
+  background: none;
+  border: 0;
+  outline: 0;
+}
+.MenuBar svg {
+  fill: #ffffff;
+}
+
+.MenuBar svg {
+  fill: #ffffff;
+}
+
+.HeroSectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.HeroSectionContent h2 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeroSectionContent p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.HeroSectionContent .heroBtn {
+  display: flex;
+  gap: 10px;
+}
+
+.HeroSectionContent .heroBtn button:first-of-type {
+  padding: 15px 24px;
+  border: 0;
+  color: #fff;
+  border-radius: 14px;
+  background: #6100c2;
+}
+
+.HeroSectionContent .heroBtn button:last-of-type {
+  border-radius: 14px;
+  border: 1px solid #fff;
+  background: linear-gradient(
+    99deg,
+    #fff 3.36%,
+    rgba(255, 255, 255, 0) 238.16%
+  );
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  width: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeroSectionContent .heroBtn button:last-of-type :first-child {
+  stroke: #6100c2;
+}
+
+
+
+@media (min-width: 300px) and (max-width: 900px) {
+
+  .HeroSection {
+    left: 0;
+    width: 100%;
+  }
+  .MenuBar {
+    display: block;
+  }
+
+}
+
+
+@media (min-width: 300px) and (max-width: 600px) {
+  
+  .navGroup nav {
+    display: none;
+    
+  }
+  
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+}

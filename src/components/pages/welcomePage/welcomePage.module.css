@@ -1,0 +1,54 @@
+.welcomePageContainer {
+  background: url("../../../assets/welcomePageBG.jpeg") 50% / cover no-repeat;
+  width: 100%;
+  opacity: 0.1;
+  height: 100vh;
+}
+.welcomePage {
+  background: linear-gradient(
+    125deg,
+    #6100c25b,
+    #1918173b,
+    #6100c25b,
+    #1918173b
+  );
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.welcomePage {
+  color: #fff;
+  line-height: 20px;
+}
+
+.enjoyMovieText {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.signUpText {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signUpText span {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.loginBtn {
+  border-radius: 14px;
+  border: 0;
+  color: #fff;
+  font-weight: 500;
+  background: #6100c2;
+  width: 225px;
+  padding: 17px 24px;
+}

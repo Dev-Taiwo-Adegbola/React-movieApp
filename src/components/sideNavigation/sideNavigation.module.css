@@ -1,0 +1,81 @@
+.sideNavigation {
+  position: fixed;
+  top: 0;
+  width: 22%;
+  height: 100vh;
+  background: #21201e;
+  box-shadow: 2px 0px 90px 0px rgba(97, 0, 194, 0.4);
+  padding-left: 40px;
+  padding-top: 30px;
+}
+
+.sideLogoGroup  {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+.sideLogoGroup > button {
+  display: none !important ;
+  
+}
+
+
+.sideNavigation,
+.movieGroup,
+.communityGroup,
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+}
+.sideNavigation {
+  gap: 30px;
+}
+
+.movieGroup,
+.communityGroup,
+.settingsGroup {
+  gap: 15px;
+}
+.communityGroup {
+  margin-top: 40px;
+}
+
+.settingsGroup {
+  margin-top: 80px;
+}
+
+.sideNavigation button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@media (min-width: 300px) and (max-width: 900px) {
+  .sideNavigation {
+    width: 80%;
+    z-index: 99;
+    left: -200%;
+    transition:left 0.5s;
+  }
+  .sideNavigationActive {
+    left: 0;
+  }
+  .sideLogoGroup > button {
+    display: block !important ;
+    
+  }
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+}
