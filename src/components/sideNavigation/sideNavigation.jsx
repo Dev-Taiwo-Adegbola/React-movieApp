@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./sideNavigation.module.css";
 import Logo from "../logo/logo";
 import {
@@ -14,6 +14,10 @@ import {
 } from "../svg-icons/svgIcons";
 
 const SideNavigation = (props) => {
+  const sections = () => {
+    pro;
+  };
+
   return (
     <div
       className={
@@ -24,38 +28,72 @@ const SideNavigation = (props) => {
     >
       <div className={styles.sideLogoGroup}>
         <Logo />
-
         <button onClick={props.toggleFunction}>
           <XIcon />
         </button>
       </div>
       <div className={styles.movieGroup}>
-        <button>
-          <FilmSvg /> Home
+        <button
+          onClick={() => {
+            props.sectionToggle("home");
+          }}
+        >
+          <FilmSvg /> {props.section === "home" ? <b>Home</b> : "Home"}
         </button>
-        <button>
-          <HeartSvg /> Favourites
+        <button
+          onClick={() => {
+            props.sectionToggle("favourities");
+          }}
+        >
+          <HeartSvg />{" "}
+          {props.section === "favourities" ? <b>Favourites</b> : "Favourites"}
         </button>
-        <button>
-          <TrendingGraphSvg /> Trending
+        <button
+          onClick={() => {
+            props.sectionToggle("trending");
+          }}
+        >
+          <TrendingGraphSvg />{" "}
+          {props.section === "trending" ? <b>Trending</b> : "Trending"}
         </button>
-        <button>
-          <CalenderSvg /> Coming soon
+        <button
+          onClick={() => {
+            props.sectionToggle("comingSoon");
+          }}
+        >
+          <CalenderSvg />{" "}
+          {props.section === "comingSoon" ? <b>Coming soon</b> : "Coming soon"}
         </button>
       </div>
       <div className={styles.communityGroup}>
-        <button>
+        <button
+          onClick={() => {
+            updateHomeToggle();
+          }}
+        >
           <CommunitySvg /> Community
         </button>
-        <button>
+        <button
+          onClick={() => {
+            updateHomeToggle();
+          }}
+        >
           <SocialSvg /> Social
         </button>
       </div>
       <div className={styles.settingsGroup}>
-        <button>
+        <button
+          onClick={() => {
+            updateHomeToggle();
+          }}
+        >
           <SettingsSvg /> Settings
         </button>
-        <button>
+        <button
+          onClick={() => {
+            updateHomeToggle();
+          }}
+        >
           <LogoutSvg /> Logout
         </button>
       </div>

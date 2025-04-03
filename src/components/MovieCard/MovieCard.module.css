@@ -1,0 +1,82 @@
+.movieCard,
+.wideMovieCard {
+  border-radius: 0px 0px 20px 20px;
+  opacity: 0.95;
+  background: linear-gradient(
+    100deg,
+    #fff 12.94%,
+    rgba(255, 255, 255, 0) 159.1%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.movieCard div,
+.wideMovieCard div {
+  padding: 15px 16px;
+
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.wideMovieCard div {
+  padding: 10px 16px;
+}
+.wideMovieCard {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.wideMovieCard img {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+
+.movieCard {
+  width: 100%;
+  height: 270px;
+  border-radius: 20px;
+}
+
+.movieCard img {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 70%;
+}
+
+
+.toggleFave {
+  position: absolute;
+  top: 10px;
+  left: 80%;
+  cursor: pointer;
+  outline: 0;
+  border-radius: 8.296px;
+  border: 0.593px solid #fff;
+  background: linear-gradient(
+    99deg,
+    #fff 3.36%,
+    rgba(255, 255, 255, 0) 238.16%
+  );
+  backdrop-filter: blur(5.925926208496094px);
+
+  padding: 5px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+.wideMovieCard .toggleFave {
+  top: 15px;
+  left: 85%;
+}
+.toggleFave :first-child {
+  stroke: #6100c2;
+}
+.toggleFave .filled {
+  fill: #6100c2;
+}

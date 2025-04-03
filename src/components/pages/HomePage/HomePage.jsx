@@ -4,6 +4,9 @@ import HeroSection from "../../HeroSection/HeroSection";
 import styles from "./HomePage.module.css";
 import MovieSection from "../../MovieSection/MovieSection";
 import { useState } from "react";
+import FavouritesSection from "../FavouritesSection/FavouritesSection";
+import Trending from "../../trending/Trending";
+
 const HomePage = () => {
   const [hasToggleNav, setHasToggleNav] = useState(false);
 
@@ -11,12 +14,26 @@ const HomePage = () => {
     setHasToggleNav((prev) => !prev);
   };
 
+  const [activeSection, setactiveSection] = useState("home");
+
+  const updateActiveSection = (section) => {
+    setactiveSection(section);
+  };
+
   return (
     <div className={styles.homepage}>
-      <SideNavigation activeMob={hasToggleNav} toggleFunction={() => updateHasToggleNav()} />
+      <SideNavigation
+        activeMob={hasToggleNav}
+        toggleFunction={() => updateHasToggleNav()}
+        sectionToggle={setactiveSection}
+        section={activeSection}
+      />
 
-      <HeroSection toggleFunction={() => updateHasToggleNav()} />
-      <MovieSection />
+      {activeSection === 'home' ? <><HeroSection toggleFunction={() => updateHasToggleNav()} />
+      <MovieSection /></> :null}
+
+      {activeSection === 'favourities' ? <FavouritesSection toggleFunction={() => updateHasToggleNav()} /> :null}
+      {activeSection === 'trending' ? <Trending toggleFunction={() => updateHasToggleNav()} /> :null}
     </div>
   );
 };

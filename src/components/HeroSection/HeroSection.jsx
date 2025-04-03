@@ -1,39 +1,12 @@
 import React, { useState } from "react";
 import styles from "./HeroSection.module.css";
-import {
-  HeartSvg,
-  MenuBar,
-  NotificationSvg,
-  SearchSvg,
-} from "../svg-icons/svgIcons";
-import hero from "../../assets/hero00.webp";
+import { HeartSvg } from "../svg-icons/svgIcons";
+import { NavigationHorizontal } from "../NavigationHorizontal/NavigationHorizontal";
 
 const HeroSection = (props) => {
-  
   return (
     <header className={styles.HeroSection}>
-      <div className={styles.navGroup}>
-        <button className={styles.MenuBar} onClick={props.toggleFunction}>
-          <MenuBar />
-        </button>
-        <nav>
-          <ul>
-            <li>Movies</li>
-            <li>Series</li>
-            <li>Documentaries</li>
-          </ul>
-        </nav>
-
-        <div className={styles.userGroup}>
-          <SearchSvg />
-          <NotificationSvg />
-          <div className={styles.user}>
-            <img src={hero} alt="user" />
-            {/* <p>Olasunk</p> */}
-          </div>
-        </div>
-      </div>
-
+      <NavigationHorizontal toggleFunction={props.toggleFunction} />
       <div className={styles.HeroSectionContent}>
         <div>
           <h2>Insider</h2>
