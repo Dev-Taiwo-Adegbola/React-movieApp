@@ -5,6 +5,25 @@
   top: 455px;
 }
 
+.loader {
+  margin: 50px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 30px dotted #b91ce0;
+  animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* .movieCard,
 .wideMovieCard {
   border-radius: 0px 0px 20px 20px;
@@ -106,7 +125,7 @@ div h3 {
 .favouritesSection > div {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
- 
+
   padding: 0 30px;
   gap: 20px;
 }

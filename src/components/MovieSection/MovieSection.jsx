@@ -10,37 +10,38 @@ import starGaze from "../../assets/starGaze.jpeg";
 import bulletScience from "../../assets/bulletScience.jpeg";
 import { MovieCard } from "../MovieCard/MovieCard";
 
-const MovieSection = () => {
+const MovieSection = ({
+  fetchedMovies_popular,
+  fetchedMovies_trending,
+  url,
+  loadingState,
+}) => {
+  // console.log(fetchedMovies);
+
   return (
     <div className={styles.MovieSection}>
       <div className={styles.trendingSection}>
         <h3>Trending</h3>
-        <div>
-          <MovieCard
-            style="movieCard"
-            image={tokyoTrain}
-            title="Tokyo Train"
-            description="2022 | Action Comedy"
-          />
-          <MovieCard
-            style="movieCard"
-            image={moonFall}
-            title="MoonFall"
-            description="2022 | Sci-fi"
-          />
-          <MovieCard
-            style="movieCard"
-            image={lifeInLA}
-            title="L.A."
-            description="2023 | Action Thriller "
-          />
-          <MovieCard
-            style="movieCard"
-            image={houseOfGucci}
-            title="House of Gucci"
-            description="2021 | Drama"
-          />
-        </div>
+
+        {loadingState === true ? (
+          <div className={styles.loader}></div>
+        ) : (
+          <div>
+            {fetchedMovies_trending.map((element, index) => {
+              return (
+                <MovieCard
+                  key={element.id}
+                  style="movieCard"
+                  image={`${url}${element.poster_path}`}
+                  title={element.title}
+                  description={`${new Date(
+                    element.release_date
+                  ).getFullYear()}`}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <div className={styles.continueWatchingSection}>
@@ -85,9 +86,11 @@ const MovieSection = () => {
           <MovieCard
             style="wideMovieCard"
             image={bulletScience}
-            title="Tokyo Train"
+            title={2}
             description="2022 | Action Comedy"
           />
+
+          <MovieCard style="wideMovieCard" image={bulletScience} />
         </div>
       </div>
     </div>

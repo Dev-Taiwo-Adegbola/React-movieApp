@@ -1,8 +1,6 @@
 import { useState } from "react";
-import styles from './MovieCard.module.css'
+import styles from "./MovieCard.module.css";
 import { FilledHeartSvg, HeartSvg } from "../svg-icons/svgIcons";
-
-
 
 export const MovieCard = (props) => {
   const [hasLiked, setHasLiked] = useState(false);
@@ -12,7 +10,11 @@ export const MovieCard = (props) => {
   };
 
   return (
-    <div className={props.style ===  "movieCard" ? styles.movieCard : styles.wideMovieCard}>
+    <div
+      className={
+        props.style === "movieCard" ? styles.movieCard : styles.wideMovieCard
+      }
+    >
       <img src={props.image} alt="" />
       <div>
         {props.title} <br />
